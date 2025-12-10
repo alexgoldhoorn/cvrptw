@@ -15,19 +15,18 @@
 # [START program]
 """Simple Vehicles Routing Problem (VRP).
 
-   This is a sample using the routing library python wrapper to solve a VRP
-   problem.
-   A description of the problem can be found here:
-   http://en.wikipedia.org/wiki/Vehicle_routing_problem.
+This is a sample using the routing library python wrapper to solve a VRP
+problem.
+A description of the problem can be found here:
+http://en.wikipedia.org/wiki/Vehicle_routing_problem.
 
-   Distances are in meters.
+Distances are in meters.
 """
 
-# [START import]
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
 import numpy as np
 
+# [START import]
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 # [END import]
 
@@ -42,15 +41,17 @@ def create_data_model():
             [0, 0, 0, 1499, 2295],
             [0, 0, 0, 1499, 2295],
             [0, 1499, 1499, 0, 852],
-            [0, 2295, 2295, 852, 0]]
+            [0, 2295, 2295, 852, 0],
+        ]
     )
-    data["time_matrix"] = np.array([
-        [0, 0, 0, 559, 825],
-        [0, 0, 0, 559, 825],
-        [0, 0, 0, 559, 825],
-        [0, 559, 559, 0, 344],
-        [0, 825, 825, 344, 0]
-    ]
+    data["time_matrix"] = np.array(
+        [
+            [0, 0, 0, 559, 825],
+            [0, 0, 0, 559, 825],
+            [0, 0, 0, 559, 825],
+            [0, 559, 559, 0, 344],
+            [0, 825, 825, 344, 0],
+        ]
     )
     # kdata["cost_matrix"] = data["distance_matrix"]
     data["num_vehicles"] = 4
@@ -76,9 +77,7 @@ def print_solution(data, manager, routing, solution):
             plan_output += " {} ->".format(node_index)
             previous_index = index
             index = solution.Value(routing.NextVar(index))
-            route_distance += routing.GetArcCostForVehicle(
-                previous_index, index, vehicle_id
-            )
+            route_distance += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
 
         node_index = manager.IndexToNode(index)
         route.append(node_index)
@@ -115,7 +114,7 @@ class NoABTogetherFilter(pywrapcp.LocalSearchFilter):
         # Get the current solution and convert it to a list of routes
         solution = self.routing.ReadAssignmentFromRouting(self.manager, self.routing.solver())
         routes = []
-        for vehicle_id in range(self.data['num_vehicles']):
+        for vehicle_id in range(self.data["num_vehicles"]):
             index = self.routing.Start(vehicle_id)
             route = []
             while not self.routing.IsEnd(index):
@@ -186,21 +185,9 @@ def main():
     # [END arc_cost]
 
     # [START constraints]
-    routing.AddDimension(
-        transit_callback_dist_index,
-        0,
-        2900,
-        False,
-        "Distance"
-    )
+    routing.AddDimension(transit_callback_dist_index, 0, 2900, False, "Distance")
 
-    routing.AddDimension(
-        transit_callback_time_index,
-        60,
-        1000,
-        False,
-        "time_constraint"
-    )
+    routing.AddDimension(transit_callback_time_index, 60, 1000, False, "time_constraint")
     # [END constraints]
 
     # Setting first solution heuristic.

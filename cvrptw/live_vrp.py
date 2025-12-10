@@ -1,8 +1,7 @@
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 from .scheduled_vrp import ScheduledVRP
-from .vrp_parameters import VRPParameters, ModelType
+from .vrp_parameters import ModelType, VRPParameters
 
 
 class LiveVRP(ScheduledVRP):
@@ -27,8 +26,7 @@ class LiveVRP(ScheduledVRP):
             delivery_index = self.manager.NodeToIndex(request[1])
             self.routing.AddPickupAndDelivery(pickup_index, delivery_index)
             self.routing.solver().Add(
-                self.routing.VehicleVar(pickup_index)
-                == self.routing.VehicleVar(delivery_index)
+                self.routing.VehicleVar(pickup_index) == self.routing.VehicleVar(delivery_index)
             )
 
     def get_search_parameters(self):

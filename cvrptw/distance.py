@@ -1,5 +1,5 @@
-from haversine import haversine, Unit
 import numpy as np
+from haversine import Unit, haversine
 
 
 def euclidean_distance(pos1, pos2):

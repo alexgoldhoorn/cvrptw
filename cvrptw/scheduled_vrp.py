@@ -1,8 +1,7 @@
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 from .notw_vrp import NoTWVRP
-from .vrp_parameters import VRPParameters, ModelType
+from .vrp_parameters import ModelType, VRPParameters
 
 
 class ScheduledVRP(NoTWVRP):
@@ -32,9 +31,7 @@ class ScheduledVRP(NoTWVRP):
             if location_idx == self.data["depot"]:
                 continue
             index = self.manager.NodeToIndex(location_idx)
-            time_dimension.CumulVar(index).SetRange(
-                int(time_window[0]), int(time_window[1])
-            )
+            time_dimension.CumulVar(index).SetRange(int(time_window[0]), int(time_window[1]))
 
     def get_search_parameters(self):
         search_parameters = pywrapcp.DefaultRoutingSearchParameters()

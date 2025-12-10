@@ -1,7 +1,6 @@
 """Simple Pickup Delivery Problem (PDP)."""
 
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 
 def create_data_model():
@@ -359,9 +358,7 @@ def print_solution(data, manager, routing, solution):
             plan_output += " {} -> ".format(manager.IndexToNode(index))
             previous_index = index
             index = solution.Value(routing.NextVar(index))
-            route_distance += routing.GetArcCostForVehicle(
-                previous_index, index, vehicle_id
-            )
+            route_distance += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
         plan_output += "{}\n".format(manager.IndexToNode(index))
         plan_output += "Distance of the route: {}m\n".format(route_distance)
         print(plan_output)
@@ -410,12 +407,9 @@ def main():
         pickup_index = manager.NodeToIndex(request[0])
         delivery_index = manager.NodeToIndex(request[1])
         routing.AddPickupAndDelivery(pickup_index, delivery_index)
+        routing.solver().Add(routing.VehicleVar(pickup_index) == routing.VehicleVar(delivery_index))
         routing.solver().Add(
-            routing.VehicleVar(pickup_index) == routing.VehicleVar(delivery_index)
-        )
-        routing.solver().Add(
-            distance_dimension.CumulVar(pickup_index)
-            <= distance_dimension.CumulVar(delivery_index)
+            distance_dimension.CumulVar(pickup_index) <= distance_dimension.CumulVar(delivery_index)
         )
 
     # Setting first solution heuristic.

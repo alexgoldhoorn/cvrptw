@@ -1,7 +1,8 @@
 import json
-import numpy as np
 import numbers
 from typing import Dict, List
+
+import numpy as np
 
 
 def prepare_data_for_json(d):
@@ -74,9 +75,7 @@ def convert_field_to_int(data: Dict[str, List], field: str):
             elif type(data[field][0]) is float:
                 data[field] = list(map(lambda x: int(round(x)), data[field]))
             else:
-                raise Exception(
-                    f"Unknown data type ({type(data[field][0])}) for {field}"
-                )
+                raise Exception(f"Unknown data type ({type(data[field][0])}) for {field}")
     else:
         # numpy array
         if data[field].dtype.kind == "i":

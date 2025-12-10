@@ -1,15 +1,14 @@
 import time
-from typing import Tuple, List, Optional, Union, Dict
+from typing import List, Optional, Tuple, Union
+
 import numpy as np
-from ortools.constraint_solver import pywrapcp
-from ortools.constraint_solver import routing_enums_pb2
 import pandas as pd
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
+
 from .distance import coord_distance
 
 
-def quick_vrp_from_df(
-    df: pd.DataFrame, max_calc_time: Optional[int] = None, verbose: bool = False
-):
+def quick_vrp_from_df(df: pd.DataFrame, max_calc_time: Optional[int] = None, verbose: bool = False):
     """
     Solve the VRP based on distances only.
     It assumes the locations are coordinates.
@@ -75,9 +74,7 @@ class QuickVRP:
         self.routing = None
         self.start_location_index: Optional[List[int]] = None
 
-        assert (
-            not self.is_multi_pickup or len(self.start_location) == len(self.visit_locations)
-        ), (
+        assert not self.is_multi_pickup or len(self.start_location) == len(self.visit_locations), (
             f"start_location and visit_locations should have the same length, "
             f"but got {len(self.start_location)} and {len(self.visit_locations)}"
         )
@@ -93,8 +90,6 @@ class QuickVRP:
             print("unique", unique_locations)
             print("index", self.start_location_index)
             self.start_location = unique_locations
-
-
 
     @property
     def n_items(self):
@@ -142,7 +137,8 @@ class QuickVRP:
                 else:
                     cost_mat[i, j] = (
                         self.dist_func(
-                            self.visit_locations[i - n_start_locations], self.visit_locations[j - n_start_locations]
+                            self.visit_locations[i - n_start_locations],
+                            self.visit_locations[j - n_start_locations],
                         )
                         + self.extra_cost_per_visit
                     )
@@ -163,9 +159,7 @@ class QuickVRP:
                     route.append(node_index - 1)
                 previous_index = index
                 index = solution.Value(self.routing.NextVar(index))
-                route_cost = self.routing.GetArcCostForVehicle(
-                    previous_index, index, vehicle_id
-                )
+                route_cost = self.routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
                 total_route_cost += route_cost
 
             node_index = self.manager.IndexToNode(index)
@@ -192,8 +186,9 @@ class QuickVRP:
         self.routing.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
 
         if self.is_multi_pickup:
-            n_start_locations = self.n_start_locations
-            #for i in range(self.n_locations):
+            pass
+            # n_start_locations = self.n_start_locations
+            # for i in range(self.n_locations):
             #    pickup_index = self.manager.NodeToIndex(self.start_location_index[i])
             #    delivery_index = self.manager.NodeToIndex(i + n_start_locations)
             #    self.routing.AddPickupAndDelivery(pickup_index, delivery_index)

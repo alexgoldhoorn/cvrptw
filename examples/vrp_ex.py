@@ -15,18 +15,18 @@
 # [START program]
 """Simple Vehicles Routing Problem (VRP).
 
-   This is a sample using the routing library python wrapper to solve a VRP
-   problem.
-   A description of the problem can be found here:
-   http://en.wikipedia.org/wiki/Vehicle_routing_problem.
+This is a sample using the routing library python wrapper to solve a VRP
+problem.
+A description of the problem can be found here:
+http://en.wikipedia.org/wiki/Vehicle_routing_problem.
 
-   Distances are in meters.
+Distances are in meters.
 """
 
-# [START import]
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
 import numpy as np
+
+# [START import]
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 # [END import]
 
@@ -386,9 +386,7 @@ def print_solution(data, manager, routing, solution):
             plan_output += " {} ->".format(node_index)
             previous_index = index
             index = solution.Value(routing.NextVar(index))
-            route_distance += routing.GetArcCostForVehicle(
-                previous_index, index, vehicle_id
-            )
+            route_distance += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
 
         node_index = manager.IndexToNode(index)
         route.append(node_index)

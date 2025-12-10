@@ -235,10 +235,19 @@ Notebooks to analyse the results and benchmarks.
 ### Other files
 - `order_query_dwh.sql`: query fro the DWH to generate an input for the mutibundling algorithm.
 
-### Pre-commit
-```
+### Code Quality with Pre-commit Hooks
+
+This project uses pre-commit hooks to maintain code quality with Black, isort, and flake8:
+
+```bash
+# Install pre-commit hooks
 pre-commit install && pre-commit install -t pre-push
+
+# Run manually on all files
+pre-commit run --all-files
 ```
+
+The hooks will automatically format your code with Black and check for issues before each commit.
 
 ## Tests
 The tests are in [`tests/`](tests/) and the output can be generated with [`run_tests.py`](run_tests.py).

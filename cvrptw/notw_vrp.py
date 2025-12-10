@@ -1,5 +1,5 @@
-from .vrp_parameters import VRPParameters, ModelType
 from .time_vrp import TimeVRP
+from .vrp_parameters import ModelType, VRPParameters
 
 
 class NoTWVRP(TimeVRP):
@@ -20,16 +20,12 @@ class NoTWVRP(TimeVRP):
         super()._create_model()
 
         cost_callback = self.create_callback("cost_matrix")
-        self._transit_callback_index_cost = self.routing.RegisterTransitCallback(
-            cost_callback
-        )
+        self._transit_callback_index_cost = self.routing.RegisterTransitCallback(cost_callback)
 
         # Add number of items constraint.
         if "courier_item_capacities" in self.data:
             items_callback = self.create_callback_1d("number_of_items")
-            items_callback_index = self.routing.RegisterUnaryTransitCallback(
-                items_callback
-            )
+            items_callback_index = self.routing.RegisterUnaryTransitCallback(items_callback)
             self.routing.AddDimensionWithVehicleCapacity(
                 items_callback_index,
                 0,  # null capacity slack
@@ -43,9 +39,7 @@ class NoTWVRP(TimeVRP):
         # Add weight constraint.
         if "courier_weight_capacities" in self.data:
             weight_callback = self.create_callback_1d("weights")
-            weight_callback_index = self.routing.RegisterUnaryTransitCallback(
-                weight_callback
-            )
+            weight_callback_index = self.routing.RegisterUnaryTransitCallback(weight_callback)
             self.routing.AddDimensionWithVehicleCapacity(
                 weight_callback_index,
                 0,  # null capacity slack

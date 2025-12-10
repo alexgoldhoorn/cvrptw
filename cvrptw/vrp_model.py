@@ -1,12 +1,12 @@
-""" A model for the VRP """
+"""A model for the VRP"""
 
 import abc
 import time
 
 from ortools.constraint_solver import pywrapcp
 
-from .vrp_parameters import VRPParameters, ModelType
 from .process_solution import process_solution_data
+from .vrp_parameters import ModelType, VRPParameters
 
 # status: https://developers.google.com/optimization/routing/routing_options#search-status
 SOLVER_STATUS = [
@@ -19,9 +19,7 @@ SOLVER_STATUS = [
 ]
 
 
-def make_routing_monitor(
-    routing_model: pywrapcp.RoutingModel, failure_limit: int
-) -> callable:
+def make_routing_monitor(routing_model: pywrapcp.RoutingModel, failure_limit: int) -> callable:
     class RoutingMonitor:
         def __init__(self, model: pywrapcp.RoutingModel):
             inf = 99999999999

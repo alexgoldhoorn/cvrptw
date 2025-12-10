@@ -10,31 +10,26 @@ Format of file names:
 
 Where `number` has 3 digits. And `config_name` is the model type used.
 """
-import os
-from glob import glob
-import argparse
-import re
 
-from cvrptw.vrp_parameters import VRPParameters
+import argparse
+import os
+import re
+from glob import glob
+
 from cvrptw.solver import run_solve_from_file
+from cvrptw.vrp_parameters import VRPParameters
 
 
 def run_vrp(input_data_csv: str, config_file: str, output_file: str, save_graph: bool):
     """Run the VRP solver for a certain input and config and store the result to the output file."""
-    print(
-        f"Solving VRP {input_data_csv} with config {config_file} and save to {output_file}..."
-    )
+    print(f"Solving VRP {input_data_csv} with config {config_file} and save to {output_file}...")
     vrp_parameters = VRPParameters.create_from_file(config_file)
-    run_solve_from_file(
-        input_data_csv, output_file, vrp_parameters, show=False, graph=save_graph
-    )
+    run_solve_from_file(input_data_csv, output_file, vrp_parameters, show=False, graph=save_graph)
     print("=" * 30)
     print()
 
 
-def run_for_config(
-    input_data_csv: str, config_file: str, output_dir: str, save_graph: bool
-):
+def run_for_config(input_data_csv: str, config_file: str, output_dir: str, save_graph: bool):
     """Run the VRP for an input and a config and create the output file name based
     on the config file name. Then it runs the VRP solver and stores the output."""
     m = re.match(r".*(\d{3}_.*)_config_(.*)\.json", config_file)

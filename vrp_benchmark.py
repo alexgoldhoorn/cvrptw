@@ -1,16 +1,17 @@
 import argparse
-import time
-import uuid
 import os
 import shutil
-import pandas as pd
-import numpy as np
+import time
+import uuid
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import seaborn as sns
-from haversine import haversine, Unit
+from haversine import Unit, haversine
 
 from cvrptw.solver import run_solve_from_file
-from cvrptw.vrp_parameters import VRPParameters, ModelType
+from cvrptw.vrp_parameters import ModelType, VRPParameters
 
 DELIVERY_COLS = ["delivery_lat", "delivery_lon"]
 
@@ -24,18 +25,14 @@ def filter_orders(df: pd.DataFrame):
 
 
 def create_time_bins(bin_duration=600, start_time=0, end_time=3600 * 24):
-    bins = [
-        (i, i + bin_duration - 1) for i in range(start_time, end_time, bin_duration)
-    ]
+    bins = [(i, i + bin_duration - 1) for i in range(start_time, end_time, bin_duration)]
     return pd.IntervalIndex.from_tuples(bins)
 
 
 def add_bins(df: pd.DataFrame, field, bin_duration=600):
     bins = pd.cut(df[field], bins=create_time_bins(bin_duration))
     df_merged = df.merge(bins, left_index=True, right_index=True, suffixes=("", "_bin"))
-    df_merged[f"{field}_bin_mid"] = (
-        df_merged[f"{field}_bin"].apply(lambda x: x.mid).astype(float)
-    )
+    df_merged[f"{field}_bin_mid"] = df_merged[f"{field}_bin"].apply(lambda x: x.mid).astype(float)
     return df_merged
 
 
@@ -119,18 +116,14 @@ def filter_data2(df: pd.DataFrame):
 def filter_data3(df: pd.DataFrame):
     """Filter more, use other store addresses and set their location to 1 of them
     (i.e. artificially create more orders)"""
-    filtered_df = df[
-        lambda x: (x.delivery_time_s >= 80000) & (x.delivery_time_s < 85000)
-    ].copy()
+    filtered_df = df[lambda x: (x.delivery_time_s >= 80000) & (x.delivery_time_s < 85000)].copy()
     print(filtered_df.groupby("store_address_id")["order_id"].count())
     store_addresses = filtered_df[
         ["store_address_id", "pickup_lat", "pickup_lon"]
     ].drop_duplicates()
     print("First store:", store_addresses.iloc[0])
     # set pickup info to same store
-    filtered_df[
-        ["store_address_id", "pickup_lat", "pickup_lon"]
-    ] = store_addresses.iloc[0]
+    filtered_df[["store_address_id", "pickup_lat", "pickup_lon"]] = store_addresses.iloc[0]
     # recalc distance
     filtered_df = add_distance(filtered_df)
     filtered_df.distance.describe()
@@ -153,9 +146,7 @@ def randomized_data(n: int, df: pd.DataFrame):
         std = df[loc_col].std()
         r_df[loc_col] += np.random.normal(0, std, size=n)
 
-    if np.any(df[DELIVERY_COLS] > 180) or np.any(
-        df[["delivery_lat", "delivery_lon"]] < -180
-    ):
+    if np.any(df[DELIVERY_COLS] > 180) or np.any(df[["delivery_lat", "delivery_lon"]] < -180):
         for loc_col in DELIVERY_COLS:
             df_fil = df[lambda x: (x[loc_col] < -180) | (x[loc_col] > 180)]
             if not df_fil.empty:
@@ -174,9 +165,7 @@ def randomized_data(n: int, df: pd.DataFrame):
         r_df[tw_col] += np.random.normal(0, 30, size=n)
 
     r_df = add_distance(r_df)
-    assert (
-        r_df.shape[0] == n
-    ), f"{n} lines expected in the random DF but retrieved {r_df.shape[0]}"
+    assert r_df.shape[0] == n, f"{n} lines expected in the random DF but retrieved {r_df.shape[0]}"
 
     return r_df
 

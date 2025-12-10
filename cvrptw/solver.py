@@ -1,13 +1,13 @@
-from .input_data_generator import create_data_model_from_csv_file
-from .vrp_parameters import VRPParameters, ModelType
-from .vrp_model import VRPModel
 from .distance_vrp import DistanceVRP
-from .time_vrp import TimeVRP
+from .graph_routes import graph_routes
+from .input_data_generator import create_data_model_from_csv_file
+from .live_vrp import LiveVRP
 from .notw_vrp import NoTWVRP
 from .scheduled_vrp import ScheduledVRP
-from .live_vrp import LiveVRP
+from .time_vrp import TimeVRP
 from .utils import save_as_json, show_dict
-from .graph_routes import graph_routes
+from .vrp_model import VRPModel
+from .vrp_parameters import ModelType, VRPParameters
 
 
 def model_factory(data, parameters: VRPParameters):

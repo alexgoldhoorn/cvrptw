@@ -1,8 +1,7 @@
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 from .vrp_model import VRPModel
-from .vrp_parameters import VRPParameters, ModelType
+from .vrp_parameters import ModelType, VRPParameters
 
 
 class DistanceVRP(VRPModel):
@@ -22,9 +21,7 @@ class DistanceVRP(VRPModel):
     def _create_model(self):
         # Create and register a transit callback for the distance between 2 points
         dist_callback = self.create_callback("distance_matrix")
-        self.transit_callback_index_dist = self.routing.RegisterTransitCallback(
-            dist_callback
-        )
+        self.transit_callback_index_dist = self.routing.RegisterTransitCallback(dist_callback)
 
         # Add route distance constraint.
         if self.parameters.max_delivery_distance is not None:

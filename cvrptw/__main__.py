@@ -1,14 +1,15 @@
-import sys
 import argparse
+import sys
+
 import pandas as pd
 
+from .graph_routes import graph_locations
 from .input_data_generator import create_random_data_model_test
-from .solver import graph_routes, run_solve_from_file, ModelType
+from .quick_vrp import quick_vrp_from_df
 from .scheduled_vrp import ScheduledVRP
+from .solver import ModelType, graph_routes, run_solve_from_file
 from .test_data import get_test_data
 from .vrp_parameters import VRPParameters
-from .graph_routes import graph_locations
-from .quick_vrp import quick_vrp_from_df
 
 
 def try_random(parameters: VRPParameters, n: int, param: int, show_output: bool):

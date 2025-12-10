@@ -1,7 +1,6 @@
 """Vehicles Routing Problem (VRP) with Time Windows."""
 
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 
 def create_data_model():
@@ -128,9 +127,7 @@ def main():
 
     # Instantiate route start and end times to produce feasible times.
     for i in range(data["num_vehicles"]):
-        routing.AddVariableMinimizedByFinalizer(
-            time_dimension.CumulVar(routing.Start(i))
-        )
+        routing.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing.Start(i)))
         routing.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing.End(i)))
 
     # Setting first solution heuristic.

@@ -1,4 +1,5 @@
 import os.path
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -151,14 +152,12 @@ def extract_locations_from_orders_df(input_df: pd.DataFrame) -> pd.DataFrame:
     pickup_df = input_df[["pickup_lat", "pickup_lon"]].drop_duplicates()
     assert pickup_df.shape[0] == 1
 
-    pickup_df = pickup_df.rename(
-        columns={"pickup_lat": "lat", "pickup_lon": "lon"}
-    ).assign(name="pickup", type="pickup")
+    pickup_df = pickup_df.rename(columns={"pickup_lat": "lat", "pickup_lon": "lon"}).assign(
+        name="pickup", type="pickup"
+    )
     delivery_df = (
         input_df[["delivery_lat", "delivery_lon", "order_id"]]
-        .rename(
-            columns={"delivery_lat": "lat", "delivery_lon": "lon", "order_id": "name"}
-        )
+        .rename(columns={"delivery_lat": "lat", "delivery_lon": "lon", "order_id": "name"})
         .assign(type="delivery")
     )
     return pd.concat([pickup_df, delivery_df], ignore_index=True)

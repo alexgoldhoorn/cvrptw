@@ -1,6 +1,6 @@
+import json
 from dataclasses import dataclass
 from enum import Enum
-import json
 from typing import Dict, List, Optional
 
 ModelType = Enum("ModelType", "scheduled live no_tw time distance quick")
@@ -17,10 +17,7 @@ class VehicleConstraintParameters:
     weight: int = 1
 
     def passes_constraints(self, values: "VehicleConstraintParameters") -> bool:
-        return (
-            values.number_of_items <= self.number_of_items
-            and values.weight <= self.weight
-        )
+        return values.number_of_items <= self.number_of_items and values.weight <= self.weight
 
 
 class ConstraintsParameters:
@@ -32,9 +29,7 @@ class ConstraintsParameters:
             return self._constraint_data[Vehicle[item]]
         return self._constraint_data[item]
 
-    def get_vehicles_for_item(
-        self, item_values: VehicleConstraintParameters
-    ) -> List[str]:
+    def get_vehicles_for_item(self, item_values: VehicleConstraintParameters) -> List[str]:
         pass_constraints = []
         for vehicle, constraints in self._constraint_data.items():
             if constraints.passes_constraints(item_values):
@@ -54,9 +49,7 @@ class ConstraintsParameters:
             vehicle_type = Vehicle[vehicle]
             if vehicle_type in constraint_dict:
                 raise ConfigError(f"{vehicle} has more items in the constraints")
-            constraint_dict[vehicle_type] = VehicleConstraintParameters(
-                **constraint_data
-            )
+            constraint_dict[vehicle_type] = VehicleConstraintParameters(**constraint_data)
         return cls(constraint_dict)
 
 
@@ -81,7 +74,6 @@ class VRPParameters:
     filter_infeasible_orders: bool = True
     multi_pickup: bool = False
 
-
     def to_dict(self):
         dict_data = self.__dict__.copy()
         dict_data["model_type"] = self.model_type.name
@@ -95,9 +87,7 @@ class VRPParameters:
         if "model_type" in data:
             data["model_type"] = ModelType[data_input["model_type"]]
         if "vehicle_constraints" in data:
-            data["vehicle_constraints"] = ConstraintsParameters.create(
-                data["vehicle_constraints"]
-            )
+            data["vehicle_constraints"] = ConstraintsParameters.create(data["vehicle_constraints"])
         return cls(**data)
 
     @classmethod

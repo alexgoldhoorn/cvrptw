@@ -1,5 +1,6 @@
-from .vrp_parameters import ModelType, VRPParameters, VehicleConstraintParameters
-from typing import List, Dict
+from typing import Dict, List
+
+from .vrp_parameters import ModelType, VehicleConstraintParameters, VRPParameters
 
 
 def add_node_lists_to_route(routes: List[Dict]) -> List[Dict]:
@@ -10,9 +11,7 @@ def add_node_lists_to_route(routes: List[Dict]) -> List[Dict]:
     return route
 
 
-def flag_vehicle_constraints(
-    routes: List[Dict], vrp_parameters: VRPParameters
-) -> List[Dict]:
+def flag_vehicle_constraints(routes: List[Dict], vrp_parameters: VRPParameters) -> List[Dict]:
     """For each route set the vehicle type constraint if the constraints are set."""
     if vrp_parameters.vehicle_constraints is None:
         print("No vehicle constraints set.")
@@ -23,9 +22,7 @@ def flag_vehicle_constraints(
         load = max(loads)
         weights = [n.get("weight_accumulated", 0) for n in route["route"]]
         weight = max(weights)
-        route[
-            "vehicle_flags"
-        ] = vrp_parameters.vehicle_constraints.get_vehicles_for_item(
+        route["vehicle_flags"] = vrp_parameters.vehicle_constraints.get_vehicles_for_item(
             VehicleConstraintParameters(load, weight)
         )
 
@@ -69,9 +66,7 @@ def process_solution_data(solution, vrp_model):
     """
 
     has_time_dimension = vrp_model.model_type != ModelType.distance
-    time_dimension = (
-        vrp_model.routing.GetDimensionOrDie("Time") if has_time_dimension else None
-    )
+    time_dimension = vrp_model.routing.GetDimensionOrDie("Time") if has_time_dimension else None
     total_time = 0
     total_distance = 0
     total_load = 0
@@ -119,15 +114,11 @@ def process_solution_data(solution, vrp_model):
 
             if previous_index >= 0:
                 # time
-                this_time = vrp_model.data["time_matrix"][previous_node_index][
-                    node_index
-                ]
+                this_time = vrp_model.data["time_matrix"][previous_node_index][node_index]
                 route_time += this_time
 
                 # distance
-                this_distance = vrp_model.data["distance_matrix"][previous_node_index][
-                    node_index
-                ]
+                this_distance = vrp_model.data["distance_matrix"][previous_node_index][node_index]
                 route_distance += this_distance
 
                 # cost
@@ -148,9 +139,7 @@ def process_solution_data(solution, vrp_model):
                     "index": index,
                     "node_name": vrp_model.data["node_names"][node_index],
                     "location": vrp_model.data["locations"][node_index],
-                    "time_start": solution.Min(time_var)
-                    if has_time_dimension
-                    else None,
+                    "time_start": solution.Min(time_var) if has_time_dimension else None,
                     "time_end": solution.Max(time_var) if has_time_dimension else None,
                     "time_window": time_window,
                     "time": this_time,

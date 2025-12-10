@@ -1,5 +1,5 @@
-from .vrp_parameters import VRPParameters, ModelType
 from .distance_vrp import DistanceVRP
+from .vrp_parameters import ModelType, VRPParameters
 
 
 class TimeVRP(DistanceVRP):
@@ -21,9 +21,7 @@ class TimeVRP(DistanceVRP):
 
         # Create and register a transit callback for the time between 2 points
         time_callback = self.create_callback("time_matrix")
-        self.transit_callback_index_time = self.routing.RegisterTransitCallback(
-            time_callback
-        )
+        self.transit_callback_index_time = self.routing.RegisterTransitCallback(time_callback)
 
         # Add Time dimension (used in planning when to do the orders, and to constraint
         #  on time windows).

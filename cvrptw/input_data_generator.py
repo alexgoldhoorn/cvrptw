@@ -1,16 +1,15 @@
+from typing import Dict, List, Optional
+
 import numpy as np
 import pandas as pd
-from typing import List, Optional, Dict
 
 from .distance import coord_distance, euclidean_distance
 from .quick_vrp import QuickVRP
-from .vrp_parameters import VRPParameters, ModelType
 from .utils import convert_field_to_int
+from .vrp_parameters import ModelType, VRPParameters
 
 
-def calculate_distance_matrix(
-    locations: List[List[float]], distance_func
-) -> List[List[float]]:
+def calculate_distance_matrix(locations: List[List[float]], distance_func) -> List[List[float]]:
     """ "
     Calculate the distance between all points i n the locations list.
     Args:
@@ -71,17 +70,11 @@ def filter_time_window_constraints(
     - or infeasible time windows (duration > time window)
     """
 
-    inconsistent_time_windows = (
-        order_time_windows[:, 0] > order_pickup_time_windows[:, 1]
-    )
+    inconsistent_time_windows = order_time_windows[:, 0] > order_pickup_time_windows[:, 1]
     meta_results["inconsistent_time_windows"] = inconsistent_time_windows.sum()
 
-    min_duration_for_time_window = (
-        order_time_windows[:, 0] - order_pickup_time_windows[:, 1]
-    )
-    max_duration_for_time_window = (
-        order_time_windows[:, 1] - order_pickup_time_windows[:, 0]
-    )
+    min_duration_for_time_window = order_time_windows[:, 0] - order_pickup_time_windows[:, 1]
+    max_duration_for_time_window = order_time_windows[:, 1] - order_pickup_time_windows[:, 0]
     pass_time_window_constraint = (min_duration_for_time_window <= duration) & (
         duration <= max_duration_for_time_window
     )
@@ -131,9 +124,7 @@ def bundle_lists(existing_bundle_ids, index_delta: int = 0):
     df = pd.DataFrame({"existing_bundle_ids": existing_bundle_ids}).reset_index()
     if index_delta > 0:
         df["index"] += index_delta
-    return (
-        df.groupby("existing_bundle_ids").agg({"index": list})["index"].values.tolist()
-    )
+    return df.groupby("existing_bundle_ids").agg({"index": list})["index"].values.tolist()
 
 
 def filter_existing_bundle_constraints(
@@ -207,10 +198,12 @@ def filter_orders(
 
     if parameters.multi_pickup:
         assert len(pickup_location) == len(order_locations), (
-            f"the number of pickup locations {len(pickup_location)} should be equal to the number of"
-            f" order locations {len(order_locations)}"
+            f"the number of pickup locations {len(pickup_location)} should be equal to "
+            f"the number of order locations {len(order_locations)}"
         )
-        distance = np.array([dist_func(pickup_location[i], order_locations[i]) for i in range(len(order_locations))])
+        distance = np.array(
+            [dist_func(pickup_location[i], order_locations[i]) for i in range(len(order_locations))]
+        )
     else:
         distance = np.array([dist_func(pickup_location, o) for o in order_locations])
     pass_distance_constraint = distance <= parameters.max_delivery_distance
@@ -264,9 +257,7 @@ def filter_orders(
         None if order_time_windows is None else order_time_windows[pass_constraints],
         order_number_items[pass_constraints],
         None if weights is None else weights[pass_constraints],
-        None
-        if order_pickup_time_windows is None
-        else order_pickup_time_windows[pass_constraints],
+        None if order_pickup_time_windows is None else order_pickup_time_windows[pass_constraints],
         meta_results,
         None if order_ids is None else order_ids[pass_constraints],
         existing_bundle_ids[pass_constraints],
@@ -343,9 +334,7 @@ def create_data_model_from_orders(
 
     if weights is not None:
         data["weights"] = np.append([0], weights)
-        data["courier_weight_capacities"] = [
-            parameters.courier_weight_capacity
-        ] * n_couriers
+        data["courier_weight_capacities"] = [parameters.courier_weight_capacity] * n_couriers
 
     # time windows for depot and delivery
     if order_time_windows is not None:
@@ -466,25 +455,19 @@ def create_data_pu_del_model_from_orders(
     # note: we set 0 for the depot
     # for the pickup location we set the load per order, and -1*load for the delivery,
     #  note that we could also keep the load at 0 for the delivery.
-    data["number_of_items"] = np.append(
-        [0], np.append(order_number_items, [0] * n_orders)
-    )
+    data["number_of_items"] = np.append([0], np.append(order_number_items, [0] * n_orders))
     data["courier_item_capacities"] = [parameters.courier_item_capacity] * n_couriers
     if existing_bundle_ids is not None:
         data["on_the_way_bundles"] = bundle_lists(existing_bundle_ids, index_delta=1)
 
     if weights is not None:
         data["weights"] = np.append([0], np.append(weights, [0] * n_orders))
-        data["courier_weight_capacities"] = [
-            parameters.courier_weight_capacity
-        ] * n_couriers
+        data["courier_weight_capacities"] = [parameters.courier_weight_capacity] * n_couriers
 
     # store original IDs/names of nodes
     if order_ids is None:
         order_ids = range(1, n_items)
-    data["node_names"] = (
-        ["depot"] + [f"P{i}" for i in order_ids] + [f"D{i}" for i in order_ids]
-    )
+    data["node_names"] = ["depot"] + [f"P{i}" for i in order_ids] + [f"D{i}" for i in order_ids]
 
     # convert to int
     for field in [
@@ -520,9 +503,7 @@ def create_random_data_model_test(
     """
     pickup_loc = np.random.random(2) * max_dist / 2
     order_locs = np.random.random((n_orders, 2)) * max_dist / 2
-    order_num_items = np.append(
-        [0], np.random.randint(1, max_demand + 1, size=n_orders)
-    )
+    order_num_items = np.append([0], np.random.randint(1, max_demand + 1, size=n_orders))
 
     if xparam == 0:
         order_time_windows = [(0, 24 * 3600) for _ in range(n_orders)]
@@ -587,9 +568,7 @@ def create_data_model_from_dataframe(
     order_locations = df[["delivery_lat", "delivery_lon"]].values
     order_num_items = df["order_number_items"].values
     weights = df["weight"].values if "weight" in df else None
-    order_time_windows = np.int_(
-        df[["time_window_start_s", "time_window_end_s"]].values
-    )
+    order_time_windows = np.int_(df[["time_window_start_s", "time_window_end_s"]].values)
     # order_num_items = np.append(
     #    [0], np.random.randint(1, max_demand + 1, size=n_orders)
     # )

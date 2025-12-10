@@ -2,10 +2,9 @@
 
 AG: trying to add time windows using the time window example as a reference.
 """
-import numpy as np
 
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+import numpy as np
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
 
 
 def create_data_model():
@@ -352,9 +351,7 @@ def create_data_model():
 
     # -- add time windows
     data["speed"] = 5  # m/s
-    data["time_matrix"] = (np.array(data["distance_matrix"]) / data["speed"]).astype(
-        np.int64
-    )
+    data["time_matrix"] = (np.array(data["distance_matrix"]) / data["speed"]).astype(np.int64)
     data["time_windows"] = [
         (0, 100000),  # depot
         (1000, 200000),  # 1
@@ -391,9 +388,7 @@ def print_solution_dist(data, manager, routing, solution):
             plan_output += " {} -> ".format(manager.IndexToNode(index))
             previous_index = index
             index = solution.Value(routing.NextVar(index))
-            route_distance += routing.GetArcCostForVehicle(
-                previous_index, index, vehicle_id
-            )
+            route_distance += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
         plan_output += "{}\n".format(manager.IndexToNode(index))
         plan_output += "Distance of the route: {}m\n".format(route_distance)
         print(plan_output)
@@ -472,12 +467,9 @@ def main():
         pickup_index = manager.NodeToIndex(request[0])
         delivery_index = manager.NodeToIndex(request[1])
         routing.AddPickupAndDelivery(pickup_index, delivery_index)
+        routing.solver().Add(routing.VehicleVar(pickup_index) == routing.VehicleVar(delivery_index))
         routing.solver().Add(
-            routing.VehicleVar(pickup_index) == routing.VehicleVar(delivery_index)
-        )
-        routing.solver().Add(
-            pudel_dimension.CumulVar(pickup_index)
-            <= pudel_dimension.CumulVar(delivery_index)
+            pudel_dimension.CumulVar(pickup_index) <= pudel_dimension.CumulVar(delivery_index)
         )
 
     # Add time windows
@@ -515,9 +507,7 @@ def main():
 
     # Instantiate route start and end times to produce feasible times.
     for i in range(data["num_vehicles"]):
-        routing.AddVariableMinimizedByFinalizer(
-            time_dimension.CumulVar(routing.Start(i))
-        )
+        routing.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing.Start(i)))
         routing.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing.End(i)))
 
     def demand_callback(index):

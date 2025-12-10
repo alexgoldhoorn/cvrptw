@@ -15,17 +15,17 @@
 # [START program]
 """Simple Vehicles Routing Problem (VRP).
 
-   This is a sample using the routing library python wrapper to solve a VRP
-   problem.
-   A description of the problem can be found here:
-   http://en.wikipedia.org/wiki/Vehicle_routing_problem.
+This is a sample using the routing library python wrapper to solve a VRP
+problem.
+A description of the problem can be found here:
+http://en.wikipedia.org/wiki/Vehicle_routing_problem.
 
-   Distances are in meters.
+Distances are in meters.
 """
 
 # [START import]
-from ortools.constraint_solver import routing_enums_pb2
-from ortools.constraint_solver import pywrapcp
+from ortools.constraint_solver import pywrapcp, routing_enums_pb2
+
 from examples.vrp_ex import create_data_model, print_solution
 
 # [END import]
@@ -102,9 +102,7 @@ def main():
     initial_solution = routing.ReadAssignmentFromRoutes(
         [[12, 13, 15, 11, 3, 4, 1, 7], [5, 8, 6, 2, 10, 16, 14, 9]], True
     )
-    solution = routing.SolveFromAssignmentWithParameters(
-        initial_solution, search_parameters
-    )
+    solution = routing.SolveFromAssignmentWithParameters(initial_solution, search_parameters)
     # [END solve]
 
     # Print solution on console.

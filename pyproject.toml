@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "cvrptw"
+version = "0.2.0"
+description = "Demo project showing how to use Google OR-Tools for Capacitated Vehicle Routing Problem with Time Windows (CVRPTW)"
+authors = ["Alex Goldhoorn <a.goldhoorn@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/alexgoldhoorn/cvrptw"
+repository = "https://github.com/alexgoldhoorn/cvrptw"
+keywords = ["vehicle-routing", "optimization", "operations-research", "logistics", "ortools"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+numpy = "^1.23.3"
+pandas = "^1.5.0"
+ortools = "^9.4.1874"
+matplotlib = "^3.6.0"
+haversine = "^2.7.0"
+pre-commit = "^2.20.0"
+jupyter = "^1.0.0"
+seaborn = "^0.12.0"
+quarto = "^0.1.0"
+plotly = "^5.11.0"
+kaleido = "0.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

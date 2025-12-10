@@ -1,0 +1,15 @@
+{
+  "model_type": "scheduled",
+  "max_time_duration": 86400,
+  "allowed_waiting_time_at_del": 600,
+  "max_delivery_time": 3600,
+  "max_delivery_distance": 5000,
+  "waiting_time_at_delivery": 60,
+  "speed": 3,
+  "courier_item_capacity": 10,
+  "courier_weight_capacity": 10,
+  "courier_cost": 5000,
+  "max_calc_time": 10,
+  "track_solver_progress": false,
+  "filter_infeasible_orders": false
+}

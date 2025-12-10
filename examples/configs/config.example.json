@@ -1,0 +1,29 @@
+{
+  "model_type": "live",
+  "max_time_duration": 86400,
+  "allowed_waiting_time_at_del": 600,
+  "max_delivery_time": 3600,
+  "max_delivery_distance": 5000,
+  "waiting_time_at_delivery": 60,
+  "speed": 3,
+  "courier_item_capacity": 5,
+  "courier_weight_capacity": 5,
+  "courier_cost": 5000,
+  "max_calc_time": 10,
+  "track_solver_progress": false,
+  "vehicle_constraints": {
+    "BICYCLE": {
+      "number_of_items": 1,
+      "weight": 1
+    },
+    "MOTORBIKE": {
+      "number_of_items": 2,
+      "weight": 2
+    },
+    "CAR": {
+      "number_of_items": 5,
+      "weight": 5
+    }
+  },
+  "filter_infeasible_orders": true
+}

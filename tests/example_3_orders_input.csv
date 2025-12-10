@@ -1,0 +1,4 @@
+order_id,id,pickup_lat,pickup_lon,delivery_lat,delivery_lon,order_number_items,time_window_start_s,time_window_end_s,pickup_time_window_start_s,pickup_time_window_end_s,weight
+order_1,order_1,52.3702,4.8952,52.3676,4.9041,2,3600,7200,0,3600,1.5
+order_2,order_2,52.3702,4.8952,52.3730,4.8850,1,5400,9000,0,3600,0.8
+order_3,order_3,52.3702,4.8952,52.3650,4.8920,3,7200,10800,0,3600,2.3

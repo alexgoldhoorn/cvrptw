@@ -1,0 +1,3037 @@
+{
+    "routes": [
+        {
+            "vehicle_id": 0,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 0,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 78477,
+                    "time_end": 78477,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 12,
+                    "index": 12,
+                    "node_name": "P488011860",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79077,
+                    "time_end": 79077,
+                    "time_window": [
+                        78951,
+                        80151
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 22,
+                    "index": 22,
+                    "node_name": "P488026724",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79677,
+                    "time_end": 79677,
+                    "time_window": [
+                        79677,
+                        80877
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 37,
+                    "index": 37,
+                    "node_name": "P487971863",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79869,
+                    "time_end": 79869,
+                    "time_window": [
+                        79869,
+                        81069
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 84,
+                    "index": 84,
+                    "node_name": "D487971863",
+                    "location": [
+                        41.4081343,
+                        2.1556594
+                    ],
+                    "time_start": 80343,
+                    "time_end": 80343,
+                    "time_window": [
+                        80282,
+                        81482
+                    ],
+                    "time": 474,
+                    "time_accumulated": 474,
+                    "distance": 1243,
+                    "distance_accumulated": 1243,
+                    "cost": 474,
+                    "cost_accumulated": 5474,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 69,
+                    "index": 69,
+                    "node_name": "D488026724",
+                    "location": [
+                        41.4084328,
+                        2.1596347
+                    ],
+                    "time_start": 80514,
+                    "time_end": 80514,
+                    "time_window": [
+                        80304,
+                        81504
+                    ],
+                    "time": 171,
+                    "time_accumulated": 645,
+                    "distance": 333,
+                    "distance_accumulated": 1576,
+                    "cost": 171,
+                    "cost_accumulated": 5645,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 59,
+                    "index": 59,
+                    "node_name": "D488011860",
+                    "location": [
+                        41.41165,
+                        2.16635
+                    ],
+                    "time_start": 80796,
+                    "time_end": 80796,
+                    "time_window": [
+                        79632,
+                        80832
+                    ],
+                    "time": 282,
+                    "time_accumulated": 927,
+                    "distance": 665,
+                    "distance_accumulated": 2241,
+                    "cost": 282,
+                    "cost_accumulated": 5927,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                12,
+                22,
+                37,
+                84,
+                69,
+                59
+            ],
+            "node_index_names": [
+                "depot",
+                "P488011860",
+                "P488026724",
+                "P487971863",
+                "D487971863",
+                "D488026724",
+                "D488011860"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 2,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 96,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79464,
+                    "time_end": 79464,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 20,
+                    "index": 20,
+                    "node_name": "P488026563",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80064,
+                    "time_end": 80064,
+                    "time_window": [
+                        80064,
+                        81264
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 32,
+                    "index": 32,
+                    "node_name": "P488029610",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80064,
+                    "time_end": 80266,
+                    "time_window": [
+                        79991,
+                        81191
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 29,
+                    "index": 29,
+                    "node_name": "P488029564",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80266,
+                    "time_end": 80266,
+                    "time_window": [
+                        80266,
+                        81466
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 16,
+                    "index": 16,
+                    "node_name": "P488016700",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80266,
+                    "time_end": 80266,
+                    "time_window": [
+                        79174,
+                        80374
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 63,
+                    "index": 63,
+                    "node_name": "D488016700",
+                    "location": [
+                        41.3947292,
+                        2.1483433
+                    ],
+                    "time_start": 80516,
+                    "time_end": 80516,
+                    "time_window": [
+                        79491,
+                        80691
+                    ],
+                    "time": 250,
+                    "time_accumulated": 250,
+                    "distance": 571,
+                    "distance_accumulated": 571,
+                    "cost": 250,
+                    "cost_accumulated": 5250,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 67,
+                    "index": 67,
+                    "node_name": "D488026563",
+                    "location": [
+                        41.3877017,
+                        2.1545769
+                    ],
+                    "time_start": 80889,
+                    "time_end": 80889,
+                    "time_window": [
+                        80423,
+                        81623
+                    ],
+                    "time": 373,
+                    "time_accumulated": 623,
+                    "distance": 939,
+                    "distance_accumulated": 1510,
+                    "cost": 373,
+                    "cost_accumulated": 5623,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 76,
+                    "index": 76,
+                    "node_name": "D488029564",
+                    "location": [
+                        41.3855232,
+                        2.15951
+                    ],
+                    "time_start": 81108,
+                    "time_end": 81108,
+                    "time_window": [
+                        80858,
+                        82058
+                    ],
+                    "time": 219,
+                    "time_accumulated": 842,
+                    "distance": 478,
+                    "distance_accumulated": 1988,
+                    "cost": 219,
+                    "cost_accumulated": 5842,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 79,
+                    "index": 79,
+                    "node_name": "D488029610",
+                    "location": [
+                        41.38078,
+                        2.1584258
+                    ],
+                    "time_start": 81346,
+                    "time_end": 81346,
+                    "time_window": [
+                        80811,
+                        82011
+                    ],
+                    "time": 238,
+                    "time_accumulated": 1080,
+                    "distance": 535,
+                    "distance_accumulated": 2523,
+                    "cost": 238,
+                    "cost_accumulated": 6080,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                20,
+                32,
+                29,
+                16,
+                63,
+                67,
+                76,
+                79
+            ],
+            "node_index_names": [
+                "depot",
+                "P488026563",
+                "P488029610",
+                "P488029564",
+                "P488016700",
+                "D488016700",
+                "D488026563",
+                "D488029564",
+                "D488029610"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 4,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 98,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79906,
+                    "time_end": 79906,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 39,
+                    "index": 39,
+                    "node_name": "P488035335",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80506,
+                    "time_end": 80506,
+                    "time_window": [
+                        80506,
+                        81706
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 25,
+                    "index": 25,
+                    "node_name": "P488027959",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80506,
+                    "time_end": 80506,
+                    "time_window": [
+                        79726,
+                        80926
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 30,
+                    "index": 30,
+                    "node_name": "P488029580",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80506,
+                    "time_end": 80506,
+                    "time_window": [
+                        80284,
+                        81484
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 77,
+                    "index": 77,
+                    "node_name": "D488029580",
+                    "location": [
+                        41.3843792,
+                        2.1495327
+                    ],
+                    "time_start": 81053,
+                    "time_end": 81053,
+                    "time_window": [
+                        80818,
+                        82018
+                    ],
+                    "time": 547,
+                    "time_accumulated": 547,
+                    "distance": 1462,
+                    "distance_accumulated": 1462,
+                    "cost": 547,
+                    "cost_accumulated": 5547,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 72,
+                    "index": 72,
+                    "node_name": "D488027959",
+                    "location": [
+                        41.3791597,
+                        2.1427323
+                    ],
+                    "time_start": 81384,
+                    "time_end": 81384,
+                    "time_window": [
+                        80502,
+                        81702
+                    ],
+                    "time": 331,
+                    "time_accumulated": 878,
+                    "distance": 812,
+                    "distance_accumulated": 2274,
+                    "cost": 331,
+                    "cost_accumulated": 5878,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 86,
+                    "index": 86,
+                    "node_name": "D488035335",
+                    "location": [
+                        41.3787777,
+                        2.1353945
+                    ],
+                    "time_start": 81649,
+                    "time_end": 81649,
+                    "time_window": [
+                        81197,
+                        82397
+                    ],
+                    "time": 265,
+                    "time_accumulated": 1143,
+                    "distance": 614,
+                    "distance_accumulated": 2888,
+                    "cost": 265,
+                    "cost_accumulated": 6143,
+                    "load": 0,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                39,
+                25,
+                30,
+                77,
+                72,
+                86
+            ],
+            "node_index_names": [
+                "depot",
+                "P488035335",
+                "P488027959",
+                "P488029580",
+                "D488029580",
+                "D488027959",
+                "D488035335"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 5,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 99,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80337,
+                    "time_end": 80337,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 45,
+                    "index": 45,
+                    "node_name": "P488038123",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80937,
+                    "time_end": 80937,
+                    "time_window": [
+                        80937,
+                        82137
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 23,
+                    "index": 23,
+                    "node_name": "P488027861",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80937,
+                    "time_end": 81052,
+                    "time_window": [
+                        80133,
+                        81333
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 26,
+                    "index": 26,
+                    "node_name": "P488028483",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80937,
+                    "time_end": 81052,
+                    "time_window": [
+                        80399,
+                        81599
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 47,
+                    "index": 47,
+                    "node_name": "P488039602",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80937,
+                    "time_end": 81052,
+                    "time_window": [
+                        80710,
+                        81910
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 46,
+                    "index": 46,
+                    "node_name": "P488038903",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80937,
+                    "time_end": 81052,
+                    "time_window": [
+                        80619,
+                        81819
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 92,
+                    "index": 92,
+                    "node_name": "D488038123",
+                    "location": [
+                        41.3956487,
+                        2.1469256
+                    ],
+                    "time_start": 81328,
+                    "time_end": 81328,
+                    "time_window": [
+                        81328,
+                        82528
+                    ],
+                    "time": 276,
+                    "time_accumulated": 276,
+                    "distance": 648,
+                    "distance_accumulated": 648,
+                    "cost": 276,
+                    "cost_accumulated": 5276,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 70,
+                    "index": 70,
+                    "node_name": "D488027861",
+                    "location": [
+                        41.3997958,
+                        2.1408343
+                    ],
+                    "time_start": 81617,
+                    "time_end": 81617,
+                    "time_window": [
+                        80654,
+                        81854
+                    ],
+                    "time": 289,
+                    "time_accumulated": 565,
+                    "distance": 686,
+                    "distance_accumulated": 1334,
+                    "cost": 289,
+                    "cost_accumulated": 5565,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 73,
+                    "index": 73,
+                    "node_name": "D488028483",
+                    "location": [
+                        41.40206149999999,
+                        2.1374994
+                    ],
+                    "time_start": 81802,
+                    "time_end": 81802,
+                    "time_window": [
+                        80875,
+                        82075
+                    ],
+                    "time": 185,
+                    "time_accumulated": 750,
+                    "distance": 375,
+                    "distance_accumulated": 1709,
+                    "cost": 185,
+                    "cost_accumulated": 5750,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 93,
+                    "index": 93,
+                    "node_name": "D488038903",
+                    "location": [
+                        41.4041293,
+                        2.1346162
+                    ],
+                    "time_start": 81973,
+                    "time_end": 81973,
+                    "time_window": [
+                        81121,
+                        82321
+                    ],
+                    "time": 171,
+                    "time_accumulated": 921,
+                    "distance": 333,
+                    "distance_accumulated": 2042,
+                    "cost": 171,
+                    "cost_accumulated": 5921,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 94,
+                    "index": 94,
+                    "node_name": "D488039602",
+                    "location": [
+                        41.4060459,
+                        2.1360446
+                    ],
+                    "time_start": 82114,
+                    "time_end": 82114,
+                    "time_window": [
+                        81501,
+                        82701
+                    ],
+                    "time": 141,
+                    "time_accumulated": 1062,
+                    "distance": 244,
+                    "distance_accumulated": 2286,
+                    "cost": 141,
+                    "cost_accumulated": 6062,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                45,
+                23,
+                26,
+                47,
+                46,
+                92,
+                70,
+                73,
+                93,
+                94
+            ],
+            "node_index_names": [
+                "depot",
+                "P488038123",
+                "P488027861",
+                "P488028483",
+                "P488039602",
+                "P488038903",
+                "D488038123",
+                "D488027861",
+                "D488028483",
+                "D488038903",
+                "D488039602"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 6,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 100,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79604,
+                    "time_end": 79604,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 21,
+                    "index": 21,
+                    "node_name": "P488026584",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80204,
+                    "time_end": 80204,
+                    "time_window": [
+                        80204,
+                        81404
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 34,
+                    "index": 34,
+                    "node_name": "P488029810",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80317,
+                    "time_end": 80701,
+                    "time_window": [
+                        80317,
+                        81517
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 36,
+                    "index": 36,
+                    "node_name": "P488029979",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80317,
+                    "time_end": 80701,
+                    "time_window": [
+                        80112,
+                        81312
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 42,
+                    "index": 42,
+                    "node_name": "P488037127",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80544,
+                    "time_end": 80701,
+                    "time_window": [
+                        80544,
+                        81744
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 89,
+                    "index": 89,
+                    "node_name": "D488037127",
+                    "location": [
+                        41.39975270000001,
+                        2.1551251
+                    ],
+                    "time_start": 80865,
+                    "time_end": 80865,
+                    "time_window": [
+                        80865,
+                        82065
+                    ],
+                    "time": 164,
+                    "time_accumulated": 164,
+                    "distance": 312,
+                    "distance_accumulated": 312,
+                    "cost": 164,
+                    "cost_accumulated": 5164,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 83,
+                    "index": 83,
+                    "node_name": "D488029979",
+                    "location": [
+                        41.4008694,
+                        2.1567852
+                    ],
+                    "time_start": 80987,
+                    "time_end": 80987,
+                    "time_window": [
+                        80382,
+                        81582
+                    ],
+                    "time": 122,
+                    "time_accumulated": 286,
+                    "distance": 186,
+                    "distance_accumulated": 498,
+                    "cost": 122,
+                    "cost_accumulated": 5286,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 68,
+                    "index": 68,
+                    "node_name": "D488026584",
+                    "location": [
+                        41.3963988,
+                        2.1643579
+                    ],
+                    "time_start": 81315,
+                    "time_end": 81315,
+                    "time_window": [
+                        80907,
+                        82107
+                    ],
+                    "time": 328,
+                    "time_accumulated": 614,
+                    "distance": 804,
+                    "distance_accumulated": 1302,
+                    "cost": 328,
+                    "cost_accumulated": 5614,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 81,
+                    "index": 81,
+                    "node_name": "D488029810",
+                    "location": [
+                        41.4090657,
+                        2.1649851
+                    ],
+                    "time_start": 81845,
+                    "time_end": 81845,
+                    "time_window": [
+                        80966,
+                        82166
+                    ],
+                    "time": 530,
+                    "time_accumulated": 1144,
+                    "distance": 1409,
+                    "distance_accumulated": 2711,
+                    "cost": 530,
+                    "cost_accumulated": 6144,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                21,
+                34,
+                36,
+                42,
+                89,
+                83,
+                68,
+                81
+            ],
+            "node_index_names": [
+                "depot",
+                "P488026584",
+                "P488029810",
+                "P488029979",
+                "P488037127",
+                "D488037127",
+                "D488029979",
+                "D488026584",
+                "D488029810"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 7,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 101,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 78543,
+                    "time_end": 78543,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 10,
+                    "index": 10,
+                    "node_name": "P488010005",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79143,
+                    "time_end": 79143,
+                    "time_window": [
+                        79143,
+                        80343
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 1,
+                    "index": 1,
+                    "node_name": "P487992603",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79143,
+                    "time_end": 79143,
+                    "time_window": [
+                        78582,
+                        79782
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 5,
+                    "index": 5,
+                    "node_name": "P488007909",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79143,
+                    "time_end": 79143,
+                    "time_window": [
+                        78885,
+                        80085
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 7,
+                    "index": 7,
+                    "node_name": "P488009007",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79143,
+                    "time_end": 79143,
+                    "time_window": [
+                        78779,
+                        79979
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 9,
+                    "index": 9,
+                    "node_name": "P488009679",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79143,
+                    "time_end": 79143,
+                    "time_window": [
+                        78978,
+                        80178
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 57,
+                    "index": 57,
+                    "node_name": "D488010005",
+                    "location": [
+                        41.3892088,
+                        2.1427328
+                    ],
+                    "time_start": 79639,
+                    "time_end": 79639,
+                    "time_window": [
+                        79594,
+                        80794
+                    ],
+                    "time": 496,
+                    "time_accumulated": 496,
+                    "distance": 1308,
+                    "distance_accumulated": 1308,
+                    "cost": 496,
+                    "cost_accumulated": 5496,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 52,
+                    "index": 52,
+                    "node_name": "D488007909",
+                    "location": [
+                        41.3929712,
+                        2.1340036
+                    ],
+                    "time_start": 79979,
+                    "time_end": 79979,
+                    "time_window": [
+                        79426,
+                        80626
+                    ],
+                    "time": 340,
+                    "time_accumulated": 836,
+                    "distance": 840,
+                    "distance_accumulated": 2148,
+                    "cost": 340,
+                    "cost_accumulated": 5836,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 56,
+                    "index": 56,
+                    "node_name": "D488009679",
+                    "location": [
+                        41.389419,
+                        2.1297919
+                    ],
+                    "time_start": 80215,
+                    "time_end": 80215,
+                    "time_window": [
+                        79685,
+                        80885
+                    ],
+                    "time": 236,
+                    "time_accumulated": 1072,
+                    "distance": 529,
+                    "distance_accumulated": 2677,
+                    "cost": 236,
+                    "cost_accumulated": 6072,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 48,
+                    "index": 48,
+                    "node_name": "D487992603",
+                    "location": [
+                        41.3915905,
+                        2.1281303
+                    ],
+                    "time_start": 80368,
+                    "time_end": 80368,
+                    "time_window": [
+                        79606,
+                        80806
+                    ],
+                    "time": 153,
+                    "time_accumulated": 1225,
+                    "distance": 278,
+                    "distance_accumulated": 2955,
+                    "cost": 153,
+                    "cost_accumulated": 6225,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 54,
+                    "index": 54,
+                    "node_name": "D488009007",
+                    "location": [
+                        41.39358076975485,
+                        2.1117443963885307
+                    ],
+                    "time_start": 80890,
+                    "time_end": 80890,
+                    "time_window": [
+                        79836,
+                        81036
+                    ],
+                    "time": 522,
+                    "time_accumulated": 1747,
+                    "distance": 1385,
+                    "distance_accumulated": 4340,
+                    "cost": 522,
+                    "cost_accumulated": 6747,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                10,
+                1,
+                5,
+                7,
+                9,
+                57,
+                52,
+                56,
+                48,
+                54
+            ],
+            "node_index_names": [
+                "depot",
+                "P488010005",
+                "P487992603",
+                "P488007909",
+                "P488009007",
+                "P488009679",
+                "D488010005",
+                "D488007909",
+                "D488009679",
+                "D487992603",
+                "D488009007"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 8,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 102,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79723,
+                    "time_end": 79723,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 38,
+                    "index": 38,
+                    "node_name": "P488031706",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80323,
+                    "time_end": 80323,
+                    "time_window": [
+                        80323,
+                        81523
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 35,
+                    "index": 35,
+                    "node_name": "P488029954",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80323,
+                    "time_end": 80740,
+                    "time_window": [
+                        80232,
+                        81432
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 44,
+                    "index": 44,
+                    "node_name": "P488037814",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80519,
+                    "time_end": 80740,
+                    "time_window": [
+                        80519,
+                        81719
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 40,
+                    "index": 40,
+                    "node_name": "P488036129",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80602,
+                    "time_end": 80740,
+                    "time_window": [
+                        80602,
+                        81802
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 41,
+                    "index": 41,
+                    "node_name": "P488036734",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80602,
+                    "time_end": 80740,
+                    "time_window": [
+                        80378,
+                        81578
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 91,
+                    "index": 91,
+                    "node_name": "D488037814",
+                    "location": [
+                        41.3978247,
+                        2.148544
+                    ],
+                    "time_start": 80968,
+                    "time_end": 80968,
+                    "time_window": [
+                        80968,
+                        82168
+                    ],
+                    "time": 228,
+                    "time_accumulated": 228,
+                    "distance": 504,
+                    "distance_accumulated": 504,
+                    "cost": 228,
+                    "cost_accumulated": 5228,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 82,
+                    "index": 82,
+                    "node_name": "D488029954",
+                    "location": [
+                        41.4081774,
+                        2.150799
+                    ],
+                    "time_start": 81417,
+                    "time_end": 81417,
+                    "time_window": [
+                        80814,
+                        82014
+                    ],
+                    "time": 449,
+                    "time_accumulated": 677,
+                    "distance": 1166,
+                    "distance_accumulated": 1670,
+                    "cost": 449,
+                    "cost_accumulated": 5677,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 85,
+                    "index": 85,
+                    "node_name": "D488031706",
+                    "location": [
+                        41.4110348,
+                        2.1422431
+                    ],
+                    "time_start": 81737,
+                    "time_end": 81737,
+                    "time_window": [
+                        80954,
+                        82154
+                    ],
+                    "time": 320,
+                    "time_accumulated": 997,
+                    "distance": 781,
+                    "distance_accumulated": 2451,
+                    "cost": 320,
+                    "cost_accumulated": 5997,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 87,
+                    "index": 87,
+                    "node_name": "D488036129",
+                    "location": [
+                        41.4129622,
+                        2.1463769
+                    ],
+                    "time_start": 81932,
+                    "time_end": 81932,
+                    "time_window": [
+                        81504,
+                        82704
+                    ],
+                    "time": 195,
+                    "time_accumulated": 1192,
+                    "distance": 406,
+                    "distance_accumulated": 2857,
+                    "cost": 195,
+                    "cost_accumulated": 6192,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 88,
+                    "index": 88,
+                    "node_name": "D488036734",
+                    "location": [
+                        41.4208055,
+                        2.1583639
+                    ],
+                    "time_start": 82434,
+                    "time_end": 82434,
+                    "time_window": [
+                        81315,
+                        82515
+                    ],
+                    "time": 502,
+                    "time_accumulated": 1694,
+                    "distance": 1327,
+                    "distance_accumulated": 4184,
+                    "cost": 502,
+                    "cost_accumulated": 6694,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                38,
+                35,
+                44,
+                40,
+                41,
+                91,
+                82,
+                85,
+                87,
+                88
+            ],
+            "node_index_names": [
+                "depot",
+                "P488031706",
+                "P488029954",
+                "P488037814",
+                "P488036129",
+                "P488036734",
+                "D488037814",
+                "D488029954",
+                "D488031706",
+                "D488036129",
+                "D488036734"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 9,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 103,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 78703,
+                    "time_end": 78703,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 15,
+                    "index": 15,
+                    "node_name": "P488015037",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79303,
+                    "time_end": 79303,
+                    "time_window": [
+                        79303,
+                        80503
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 14,
+                    "index": 14,
+                    "node_name": "P488013682",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79303,
+                    "time_end": 79303,
+                    "time_window": [
+                        79238,
+                        80438
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 6,
+                    "index": 6,
+                    "node_name": "P488008693",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79303,
+                    "time_end": 79303,
+                    "time_window": [
+                        78810,
+                        80010
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 4,
+                    "index": 4,
+                    "node_name": "P487998206",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79303,
+                    "time_end": 79303,
+                    "time_window": [
+                        78552,
+                        79752
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 53,
+                    "index": 53,
+                    "node_name": "D488008693",
+                    "location": [
+                        41.4105899,
+                        2.185353
+                    ],
+                    "time_start": 80358,
+                    "time_end": 80358,
+                    "time_window": [
+                        79505,
+                        80705
+                    ],
+                    "time": 1055,
+                    "time_accumulated": 1055,
+                    "distance": 2986,
+                    "distance_accumulated": 2986,
+                    "cost": 1055,
+                    "cost_accumulated": 6055,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 51,
+                    "index": 51,
+                    "node_name": "D487998206",
+                    "location": [
+                        41.4148384,
+                        2.1899636
+                    ],
+                    "time_start": 80621,
+                    "time_end": 80621,
+                    "time_window": [
+                        79466,
+                        80666
+                    ],
+                    "time": 263,
+                    "time_accumulated": 1318,
+                    "distance": 609,
+                    "distance_accumulated": 3595,
+                    "cost": 263,
+                    "cost_accumulated": 6318,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 62,
+                    "index": 62,
+                    "node_name": "D488015037",
+                    "location": [
+                        41.411217,
+                        2.1841825
+                    ],
+                    "time_start": 80890,
+                    "time_end": 80890,
+                    "time_window": [
+                        80288,
+                        81488
+                    ],
+                    "time": 269,
+                    "time_accumulated": 1587,
+                    "distance": 628,
+                    "distance_accumulated": 4223,
+                    "cost": 269,
+                    "cost_accumulated": 6587,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 61,
+                    "index": 61,
+                    "node_name": "D488013682",
+                    "location": [
+                        41.4121958,
+                        2.179452
+                    ],
+                    "time_start": 81086,
+                    "time_end": 81086,
+                    "time_window": [
+                        80015,
+                        81215
+                    ],
+                    "time": 196,
+                    "time_accumulated": 1783,
+                    "distance": 409,
+                    "distance_accumulated": 4632,
+                    "cost": 196,
+                    "cost_accumulated": 6783,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                15,
+                14,
+                6,
+                4,
+                53,
+                51,
+                62,
+                61
+            ],
+            "node_index_names": [
+                "depot",
+                "P488015037",
+                "P488013682",
+                "P488008693",
+                "P487998206",
+                "D488008693",
+                "D487998206",
+                "D488015037",
+                "D488013682"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 10,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 104,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 78844,
+                    "time_end": 78844,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 11,
+                    "index": 11,
+                    "node_name": "P488011484",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79444,
+                    "time_end": 79444,
+                    "time_window": [
+                        79444,
+                        80644
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 3,
+                    "index": 3,
+                    "node_name": "P487997517",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79444,
+                    "time_end": 79600,
+                    "time_window": [
+                        78705,
+                        79905
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 2,
+                    "index": 2,
+                    "node_name": "P487997239",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79444,
+                    "time_end": 79600,
+                    "time_window": [
+                        78948,
+                        80148
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 17,
+                    "index": 17,
+                    "node_name": "P488019980",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79503,
+                    "time_end": 79600,
+                    "time_window": [
+                        79503,
+                        80703
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 19,
+                    "index": 19,
+                    "node_name": "P488025874",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79600,
+                    "time_end": 79600,
+                    "time_window": [
+                        79600,
+                        80800
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 58,
+                    "index": 58,
+                    "node_name": "D488011484",
+                    "location": [
+                        41.4090736,
+                        2.1463304
+                    ],
+                    "time_start": 80162,
+                    "time_end": 80162,
+                    "time_window": [
+                        79987,
+                        81187
+                    ],
+                    "time": 562,
+                    "time_accumulated": 562,
+                    "distance": 1506,
+                    "distance_accumulated": 1506,
+                    "cost": 562,
+                    "cost_accumulated": 5562,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 50,
+                    "index": 50,
+                    "node_name": "D487997517",
+                    "location": [
+                        41.4120395,
+                        2.1407853
+                    ],
+                    "time_start": 80411,
+                    "time_end": 80411,
+                    "time_window": [
+                        79615,
+                        80815
+                    ],
+                    "time": 249,
+                    "time_accumulated": 811,
+                    "distance": 568,
+                    "distance_accumulated": 2074,
+                    "cost": 249,
+                    "cost_accumulated": 5811,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 49,
+                    "index": 49,
+                    "node_name": "D487997239",
+                    "location": [
+                        41.4159652,
+                        2.1482326
+                    ],
+                    "time_start": 80724,
+                    "time_end": 80724,
+                    "time_window": [
+                        79748,
+                        80948
+                    ],
+                    "time": 313,
+                    "time_accumulated": 1124,
+                    "distance": 759,
+                    "distance_accumulated": 2833,
+                    "cost": 313,
+                    "cost_accumulated": 6124,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 66,
+                    "index": 66,
+                    "node_name": "D488025874",
+                    "location": [
+                        41.4223837,
+                        2.1445363
+                    ],
+                    "time_start": 81043,
+                    "time_end": 81043,
+                    "time_window": [
+                        80499,
+                        81699
+                    ],
+                    "time": 319,
+                    "time_accumulated": 1443,
+                    "distance": 777,
+                    "distance_accumulated": 3610,
+                    "cost": 319,
+                    "cost_accumulated": 6443,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 64,
+                    "index": 64,
+                    "node_name": "D488019980",
+                    "location": [
+                        41.42744830503435,
+                        2.143255323171616
+                    ],
+                    "time_start": 81294,
+                    "time_end": 81294,
+                    "time_window": [
+                        80651,
+                        81851
+                    ],
+                    "time": 251,
+                    "time_accumulated": 1694,
+                    "distance": 573,
+                    "distance_accumulated": 4183,
+                    "cost": 251,
+                    "cost_accumulated": 6694,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                11,
+                3,
+                2,
+                17,
+                19,
+                58,
+                50,
+                49,
+                66,
+                64
+            ],
+            "node_index_names": [
+                "depot",
+                "P488011484",
+                "P487997517",
+                "P487997239",
+                "P488019980",
+                "P488025874",
+                "D488011484",
+                "D487997517",
+                "D487997239",
+                "D488025874",
+                "D488019980"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 11,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 105,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79524,
+                    "time_end": 79524,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 28,
+                    "index": 28,
+                    "node_name": "P488029298",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80124,
+                    "time_end": 80124,
+                    "time_window": [
+                        80124,
+                        81324
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 24,
+                    "index": 24,
+                    "node_name": "P488027903",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80471,
+                    "time_end": 80520,
+                    "time_window": [
+                        80471,
+                        81671
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 8,
+                    "index": 8,
+                    "node_name": "P488009069",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80471,
+                    "time_end": 80520,
+                    "time_window": [
+                        79638,
+                        80838
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 43,
+                    "index": 43,
+                    "node_name": "P488037272",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80520,
+                    "time_end": 80520,
+                    "time_window": [
+                        80520,
+                        81720
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 27,
+                    "index": 27,
+                    "node_name": "P488028962",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80520,
+                    "time_end": 80520,
+                    "time_window": [
+                        80456,
+                        81656
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 75,
+                    "index": 75,
+                    "node_name": "D488029298",
+                    "location": [
+                        41.3950964,
+                        2.1454274
+                    ],
+                    "time_start": 80841,
+                    "time_end": 80841,
+                    "time_window": [
+                        80488,
+                        81688
+                    ],
+                    "time": 321,
+                    "time_accumulated": 321,
+                    "distance": 784,
+                    "distance_accumulated": 784,
+                    "cost": 321,
+                    "cost_accumulated": 5321,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 71,
+                    "index": 71,
+                    "node_name": "D488027903",
+                    "location": [
+                        41.3898076,
+                        2.1384644
+                    ],
+                    "time_start": 81177,
+                    "time_end": 81177,
+                    "time_window": [
+                        80990,
+                        82190
+                    ],
+                    "time": 336,
+                    "time_accumulated": 657,
+                    "distance": 827,
+                    "distance_accumulated": 1611,
+                    "cost": 336,
+                    "cost_accumulated": 5657,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 55,
+                    "index": 55,
+                    "node_name": "D488009069",
+                    "location": [
+                        41.3922439,
+                        2.1384573
+                    ],
+                    "time_start": 81327,
+                    "time_end": 81327,
+                    "time_window": [
+                        80262,
+                        81462
+                    ],
+                    "time": 150,
+                    "time_accumulated": 807,
+                    "distance": 271,
+                    "distance_accumulated": 1882,
+                    "cost": 150,
+                    "cost_accumulated": 5807,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 90,
+                    "index": 90,
+                    "node_name": "D488037272",
+                    "location": [
+                        41.3983348,
+                        2.1351018
+                    ],
+                    "time_start": 81631,
+                    "time_end": 81631,
+                    "time_window": [
+                        81205,
+                        82405
+                    ],
+                    "time": 304,
+                    "time_accumulated": 1111,
+                    "distance": 733,
+                    "distance_accumulated": 2615,
+                    "cost": 304,
+                    "cost_accumulated": 6111,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 74,
+                    "index": 74,
+                    "node_name": "D488028962",
+                    "location": [
+                        41.4014989,
+                        2.1147579
+                    ],
+                    "time_start": 82269,
+                    "time_end": 82269,
+                    "time_window": [
+                        81197,
+                        82397
+                    ],
+                    "time": 638,
+                    "time_accumulated": 1749,
+                    "distance": 1733,
+                    "distance_accumulated": 4348,
+                    "cost": 638,
+                    "cost_accumulated": 6749,
+                    "load": 0,
+                    "load_accumulated": 5,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                28,
+                24,
+                8,
+                43,
+                27,
+                75,
+                71,
+                55,
+                90,
+                74
+            ],
+            "node_index_names": [
+                "depot",
+                "P488029298",
+                "P488027903",
+                "P488009069",
+                "P488037272",
+                "P488028962",
+                "D488029298",
+                "D488027903",
+                "D488009069",
+                "D488037272",
+                "D488028962"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 13,
+            "courier_item_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 107,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79075,
+                    "time_end": 79075,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 13,
+                    "index": 13,
+                    "node_name": "P488012296",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 79675,
+                    "time_end": 79675,
+                    "time_window": [
+                        78989,
+                        80189
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 5000,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 33,
+                    "index": 33,
+                    "node_name": "P488029793",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80275,
+                    "time_end": 80275,
+                    "time_window": [
+                        80275,
+                        81475
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 18,
+                    "index": 18,
+                    "node_name": "P488024211",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80275,
+                    "time_end": 80275,
+                    "time_window": [
+                        79797,
+                        80997
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 3,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 31,
+                    "index": 31,
+                    "node_name": "P488027930",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": 80275,
+                    "time_end": 80275,
+                    "time_window": [
+                        80159,
+                        81359
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 5000,
+                    "load": 1,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 60,
+                    "index": 60,
+                    "node_name": "D488012296",
+                    "location": [
+                        41.3963439,
+                        2.144075
+                    ],
+                    "time_start": 80626,
+                    "time_end": 80626,
+                    "time_window": [
+                        79506,
+                        80706
+                    ],
+                    "time": 351,
+                    "time_accumulated": 351,
+                    "distance": 872,
+                    "distance_accumulated": 872,
+                    "cost": 351,
+                    "cost_accumulated": 5351,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 80,
+                    "index": 80,
+                    "node_name": "D488029793",
+                    "location": [
+                        41.39669800000001,
+                        2.1335143
+                    ],
+                    "time_start": 80980,
+                    "time_end": 80980,
+                    "time_window": [
+                        80907,
+                        82107
+                    ],
+                    "time": 354,
+                    "time_accumulated": 705,
+                    "distance": 882,
+                    "distance_accumulated": 1754,
+                    "cost": 354,
+                    "cost_accumulated": 5705,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 65,
+                    "index": 65,
+                    "node_name": "D488024211",
+                    "location": [
+                        41.3891521,
+                        2.1205274
+                    ],
+                    "time_start": 81497,
+                    "time_end": 81497,
+                    "time_window": [
+                        80622,
+                        81822
+                    ],
+                    "time": 517,
+                    "time_accumulated": 1222,
+                    "distance": 1370,
+                    "distance_accumulated": 3124,
+                    "cost": 517,
+                    "cost_accumulated": 6222,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 78,
+                    "index": 78,
+                    "node_name": "D488027930",
+                    "location": [
+                        41.3876691,
+                        2.1090325
+                    ],
+                    "time_start": 81881,
+                    "time_end": 81881,
+                    "time_window": [
+                        80819,
+                        82019
+                    ],
+                    "time": 384,
+                    "time_accumulated": 1606,
+                    "distance": 973,
+                    "distance_accumulated": 4097,
+                    "cost": 384,
+                    "cost_accumulated": 6606,
+                    "load": 0,
+                    "load_accumulated": 4,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                }
+            ],
+            "node_index_route": [
+                0,
+                13,
+                33,
+                18,
+                31,
+                60,
+                80,
+                65,
+                78
+            ],
+            "node_index_names": [
+                "depot",
+                "P488012296",
+                "P488029793",
+                "P488024211",
+                "P488027930",
+                "D488012296",
+                "D488029793",
+                "D488024211",
+                "D488027930"
+            ],
+            "vehicle_flags": [
+                "CAR"
+            ]
+        }
+    ],
+    "meta": {
+        "n_orders": 50,
+        "n_max_couriers": 50,
+        "type": "pickup-delivery"
+    },
+    "filter": {
+        "distance_infeasible": 0,
+        "time_infeasible": 0,
+        "item_capacity_infeasible": 0,
+        "inconsistent_time_windows": 3,
+        "time_window_infeasible": 0,
+        "n_filtered": 3
+    },
+    "summary": {
+        "total_time": 15629,
+        "total_distance": 38433,
+        "total_cost": 70629,
+        "total_load": 47,
+        "total_weight": 0,
+        "num_vehicles_used": 11
+    },
+    "parameters": {
+        "model_type": "live",
+        "max_time_duration": 86400,
+        "allowed_waiting_time_at_del": 600,
+        "max_delivery_time": 3600,
+        "max_delivery_distance": 5000,
+        "waiting_time_at_delivery": 60,
+        "speed": 3,
+        "courier_item_capacity": 5,
+        "courier_weight_capacity": 5,
+        "courier_cost": 5000,
+        "max_calc_time": 10,
+        "track_solver_progress": false,
+        "vehicle_constraints": {
+            "BICYCLE": {
+                "number_of_items": 1,
+                "weight": 1
+            },
+            "MOTORBIKE": {
+                "number_of_items": 2,
+                "weight": 2
+            },
+            "CAR": {
+                "number_of_items": 5,
+                "weight": 5
+            }
+        }
+    },
+    "solver": {
+        "model": "live",
+        "duration": 2.403021812438965,
+        "status_code": 1,
+        "status": "1-success"
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "routes": [
+        {
+            "vehicle_id": 1,
+            "courier_item_capacities": 5,
+            "courier_weight_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 4,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": null,
+                    "time_end": null,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 2,
+                    "index": 2,
+                    "node_name": "487991703",
+                    "location": [
+                        41.4028219,
+                        2.207643
+                    ],
+                    "time_start": null,
+                    "time_end": null,
+                    "time_window": [
+                        79908,
+                        81108
+                    ],
+                    "time": 1554,
+                    "time_accumulated": 1554,
+                    "distance": 4481,
+                    "distance_accumulated": 4481,
+                    "cost": 4481,
+                    "cost_accumulated": 4481,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 1,
+                    "weight_accumulated": 1
+                }
+            ],
+            "node_index_route": [
+                0,
+                2
+            ],
+            "node_index_names": [
+                "depot",
+                "487991703"
+            ],
+            "vehicle_flags": [
+                "BICYCLE",
+                "MOTORBIKE",
+                "CAR"
+            ]
+        },
+        {
+            "vehicle_id": 2,
+            "courier_item_capacities": 5,
+            "courier_weight_capacities": 5,
+            "route": [
+                {
+                    "node_index": 0,
+                    "index": 5,
+                    "node_name": "depot",
+                    "location": [
+                        41.3969874,
+                        2.154488
+                    ],
+                    "time_start": null,
+                    "time_end": null,
+                    "time_window": [
+                        0,
+                        86400
+                    ],
+                    "time": 0,
+                    "time_accumulated": 0,
+                    "distance": 0,
+                    "distance_accumulated": 0,
+                    "cost": 0,
+                    "cost_accumulated": 0,
+                    "load": 0,
+                    "load_accumulated": 0,
+                    "weight": 0,
+                    "weight_accumulated": 0
+                },
+                {
+                    "node_index": 1,
+                    "index": 1,
+                    "node_name": "87991703",
+                    "location": [
+                        41.3851402,
+                        2.1506839
+                    ],
+                    "time_start": null,
+                    "time_end": null,
+                    "time_window": [
+                        79651,
+                        80851
+                    ],
+                    "time": 512,
+                    "time_accumulated": 512,
+                    "distance": 1355,
+                    "distance_accumulated": 1355,
+                    "cost": 1355,
+                    "cost_accumulated": 1355,
+                    "load": 1,
+                    "load_accumulated": 1,
+                    "weight": 1,
+                    "weight_accumulated": 1
+                },
+                {
+                    "node_index": 3,
+                    "index": 3,
+                    "node_name": "487992603",
+                    "location": [
+                        41.3915905,
+                        2.1281303
+                    ],
+                    "time_start": null,
+                    "time_end": null,
+                    "time_window": [
+                        79606,
+                        80806
+                    ],
+                    "time": 731,
+                    "time_accumulated": 1243,
+                    "distance": 2014,
+                    "distance_accumulated": 3369,
+                    "cost": 2014,
+                    "cost_accumulated": 3369,
+                    "load": 1,
+                    "load_accumulated": 2,
+                    "weight": 1,
+                    "weight_accumulated": 2
+                }
+            ],
+            "node_index_route": [
+                0,
+                1,
+                3
+            ],
+            "node_index_names": [
+                "depot",
+                "87991703",
+                "487992603"
+            ],
+            "vehicle_flags": [
+                "MOTORBIKE",
+                "CAR"
+            ]
+        }
+    ],
+    "meta": {
+        "n_orders": 3,
+        "n_max_couriers": 3,
+        "type": "delivery"
+    },
+    "filter": {
+        "distance_infeasible": 0,
+        "time_infeasible": 0,
+        "item_capacity_infeasible": 0,
+        "weight_capacity_infeasible": 0,
+        "n_filtered": 0
+    },
+    "summary": {
+        "total_time": 2797,
+        "total_distance": 7850,
+        "total_cost": 7850,
+        "total_load": 3,
+        "total_weight": 3,
+        "num_vehicles_used": 2
+    },
+    "parameters": {
+        "model_type": "distance",
+        "max_time_duration": 86400,
+        "allowed_waiting_time_at_del": 600,
+        "max_delivery_time": 3600,
+        "max_delivery_distance": 5000,
+        "waiting_time_at_delivery": 60,
+        "speed": 3,
+        "courier_item_capacity": 5,
+        "courier_weight_capacity": 5,
+        "courier_cost": 5000,
+        "max_calc_time": 10,
+        "track_solver_progress": false,
+        "vehicle_constraints": {
+            "BICYCLE": {
+                "number_of_items": 1,
+                "weight": 1
+            },
+            "MOTORBIKE": {
+                "number_of_items": 2,
+                "weight": 2
+            },
+            "CAR": {
+                "number_of_items": 5,
+                "weight": 5
+            }
+        }
+    },
+    "solver": {
+        "model": "distance",
+        "duration": 0.0012140274047851562,
+        "status_code": 1,
+        "status": "1-success"
+    }
+}
